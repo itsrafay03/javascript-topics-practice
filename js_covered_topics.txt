@@ -1,0 +1,25 @@
+Topics Covered (In Order of Appearance)
+Based on your document, here is the roadmap of what you have mastered:
+
+Variables & Scope: var, let, const, Hoisting, and the Temporal Dead Zone (TDZ).
+Naming Conventions: camelCase, PascalCase, and SNAKE_CASE.
+Scopes: Global, Functional, and Block Scope.
+Type System: Dynamic Typing, Primitives vs. Reference Types, and Memory (Stack vs. Heap).
+Type Coercion & Equality: Implicit/Explicit conversion and Loose (==) vs. Strict (===) equality.
+Truthy vs. Falsy: The "Falsy 6" and how JS evaluates logic.
+Operators: Arithmetic, Logical, Unary, Ternary, and the Spread/Rest Operators.
+Cloning Logic: Shallow vs. Deep copying, structuredClone, and JSON hacks.
+Conditional Logic: If/Else, Short-circuiting (&&, ||), and the Switch statement.
+Professional Patterns: Early Return Pattern/Guard Clauses.
+Loops: Traditional (for, while) and Modern (for...of, for...in, forEach).
+Array Methods: .map(), .filter(), .reduce(), .slice(), .sort(), .splice(), .find(), etc..
+Strings: Interpolation and Template Literals.
+Functions: First-Class Citizens, Execution Context, Call Stack, and Hoisting.
+Advanced Functions: Function Expressions vs. Declarations, Scope Chain, and Closures.
+Arrow Functions: Syntax, Implicit Returns, and Lexical this.
+Higher-Order Functions (HOF): Functional abstraction and Logging wrappers.
+Pure vs. Impure Functions: Determinism and Side Effects.
+IIFE: Immediately Invoked Function Expressions for privacy.
+Objects: Literals vs. Classes, Prototypes, Dynamic Properties, and Destructuring.
+The this Keyword: Dynamic binding, call(), and Identity Theft.
+Advanced Object Features: Optional Chaining (?.) and Computed Property Names.
