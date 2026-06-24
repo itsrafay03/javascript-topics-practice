@@ -299,7 +299,6 @@ for (let i = 1; i <= 50; i++) {
 
 for (let i = 1; i <= h; i++) {
     console.log("y");
-
 };
 
 let input = prompt("Enter your number: ");
