@@ -7,3 +7,12 @@ h1{
     text-decoration: line-through;
     background-color: cyan;
 }
+
+#div-heading{
+    color: rgb(220, 55, 82);
+    font-size: 24px;
+}
+
+.para{
+    font-family: 'Courier New';
+}
