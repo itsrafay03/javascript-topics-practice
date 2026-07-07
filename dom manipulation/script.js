@@ -58,8 +58,48 @@ elem2[1].innerText = "Corner McGragor vs Khabib Nurmagadov"
 console.log(elem2[1].innerText); 
 
 // Access an element by its Tag name.
-let elem3 = document.getElementsByTagName("h4");
-console.log(elem3[0]);
-console.dir(elem3);
+let elem3 = document.getElementsByTagName("h4"); // returns an HTMLCollection of elements with the given tag name.
+console.log(elem3); // HTMLCollection [h4]
+console.dir(elem3); // HTMLCollection(1)
+
+// Now there is more batter way to access the elements which is querySelector. 
+// querySelector("myId / myClass / tag") : Returns the first element that is a descendant of node that matches selectors.
+// querySelectorAll("myId / myClass / tag") : Returns all element descendants of node that match selectors. Returns NodeList of matched elements.
+
+// Select element by Id. We use '#' before id name in querySelector.
+let elem4 = document.querySelector("#div-heading")
+console.log(elem4); // return exact Html element.
+// No need to use querySelectorAll for id because it is unique and single.
+
+// Select element by class. We use '.' before class name in querySelector.
+let elem5 = document.querySelector(".para"); // returns 1st element whose class is 'para'.
+console.log(elem5); // return exact Html element.
+let elem6 = document.querySelectorAll('.para'); // returns all elements whose class are 'para'.
+console.log(elem6); // NodeList(2) [p.para, p.para]
+
+// Select element by tag.
+let elem7 = document.querySelector("img");
+console.log(elem7); // return exact Html element.
+let elem8 = document.querySelectorAll("button");
+console.log(elem8); // NodeList(2) [button, button]
+
+// The querySelector can handle complex relational queries like:
+let elem9 = document.querySelector("div > p");
+console.log(elem9);  // return the First HTML tag of p which is found in div. 
+// The div > p is a CSS child combinator. The > symbol means the <p> must be an immediate child of the <div>.
+let elem10 = document.querySelector("div > p"); // If you wanted to select All paragraphs, you would use querySelectorAll instead.
+
+
+
+// Now Modifying the Elements that we access/select from our DOM:
+console.log(elem1.tagName); // H2
+console.log(elem9.tagName); // p
+console.log(elem8.tagName); // undefined 
+
+console.log(tagname);
+
+
+
+
 
 
