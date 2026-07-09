@@ -91,13 +91,69 @@ let elem10 = document.querySelector("div > p"); // If you wanted to select All p
 
 
 
-// Now Modifying the Elements that we access/select from our DOM:
+// Now we have different properties for Checking and Modifying the Elements that we access/select from our DOM:
+// tagName : returns tag for only element nodes.
+// If its a tag then this property will retun the tag name otherwise if there is something else like NodeList or HTMLCollection then this property will return undefined.
 console.log(elem1.tagName); // H2
 console.log(elem9.tagName); // p
+console.log(elem3.tagName); // undefined 
 console.log(elem8.tagName); // undefined 
 
-console.log(tagname);
+// nodeName : returns the current node name for all DOM nodes (including text, comments, and attributes)   
+console.log(elem1.firstChild.nodeName); // #text
+console.log(elem1.firstChild.nodeType); // 3, nodeType returns integer that identifies what node is it. It distinguishes different kinds of nodes from each other, such as elements, text, and comments.
+console.log(elem1.firstChild.nodeValue); // returns or sets the value of the current node.
 
+
+// firstChild : this property of the Node interface returns the node's first child in the tree, or null if the node has no children. It will return any child node(text, comments, and attributes). But if we want just to retun the first child element node of a node then use .firstElementChild property.
+let elem11 = document.querySelector("#para-01");
+console.log(elem11.firstChild); // #text, because is space after tag which is consider as text node.
+console.log(elem11.firstElementChild); // <span>, because this is first element child in <p>.
+
+// lastChild : this property of the Node interface returns the node's last child in the tree, or null if the node has no children. It will return any child node(text, comments, and attributes). But if we want just to retun the last child element node of a node then use .lastElementChild property.
+let elem12 = document.querySelector("#para-01");
+console.log(elem12.lastChild); // #text, because if the node has only one child node then its first and last child aare both the same node. 
+console.log(elem12.lastElementChild); // <span>
+
+// nextSibling : this property of the Node interface returns the node immediately following the specified one in their parent's childNodes, or returns null if the specified node is the last child in the parent element.
+let elem13 = document.querySelector("body > img");
+console.log(elem13.nextSibling);  // #text
+// If we want next element sibling then use nextElementSibling property.
+console.log(elem13.nextElementSibling);  // <button>
+console.log(elem10.nextElementSibling);  // null, as there is no next element node of elem10.
+
+// Similarly there is previousSibling property to access previous sibling node. It returns null if the specified node is the first in that list. Also if we want only previous element node then we will use previousElemntSibling property.
+
+// Next is text related properties. We can get the text of node by using them and even change the text of the node.
+// innerText : returns the text content of the element and all its children.
+console.log(document.querySelector(".fruties-div").innerText); // it give the complete text inside the div tag, even the text of all its children.
+console.log(document.querySelector(".fruties-div").childElementCount); // 2, As this div has 2 child Element nodes h5 and ul.
+console.log(document.querySelector(".fruties-div").childNodes[3].children[1].innerText); // Apple, here we are accessing the text of specific inner child of that div. 
+// document.querySelector(".fruties-div").innerText = "The Islamai University of Bahawalpur"; // here we change the text of that div.
+// console.log(document.querySelector(".fruties-div").innerText); // show updated text.
+// console.log(document.querySelector(".fruties-div").childElementCount); // 0, As this div now updated its content. Now there is only text in this div.
+
+// innerHTML : returns the plain text or HTML contents in the element.
+console.log(document.querySelector(".fruties-div").innerHTML); // returns text along with its tags.
+document.querySelector(".fruties-div").innerHTML = "<p>Pakistan Zindabad.</p>"; // We can use innerHTML to set new Html tag in element.
+console.log(document.querySelector(".fruties-div").innerHTML); // Now it display updated inner text for this div.
+
+// textContent : returns textual content even for hidden elements. It also take care of the spaces between the nodes, which is hidden text for DOM.
+console.dir(document.querySelector(".hide-heading").textContent); // Apna College, show the hidden text.
+console.dir(document.querySelector(".hide-heading").innerText); // Not able to show the hidden text.
+
+
+
+
+
+
+// Few more properties of Nodes in DOM.
+
+console.log(elem10.ownerDocument); // This property of the Node interface returns the top-level document object of the node.
+console.log(elem10.baseURI); // returns the absolute base URL of the document containing the node.
+console.log(elem10.isConnected); // A boolean indicating whether or not the Node is connected (directly or indirectly) to the context object, e.g., the Document object in the case of the normal DOM, or the ShadowRoot in the case of a shadow DOM.
+console.log(elem10.parentNode.nodeName); // DIV, parentNode returns name of parent element or null if there is no parent(like of root node).  
+console.log(elem10.childNodes[0].parentElement); // 
 
 
 
