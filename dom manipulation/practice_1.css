@@ -1,0 +1,12 @@
+.que_1_heading{
+    color: brown;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+}

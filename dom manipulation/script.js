@@ -104,7 +104,6 @@ console.log(elem1.firstChild.nodeName); // #text
 console.log(elem1.firstChild.nodeType); // 3, nodeType returns integer that identifies what node is it. It distinguishes different kinds of nodes from each other, such as elements, text, and comments.
 console.log(elem1.firstChild.nodeValue); // returns or sets the value of the current node.
 
-
 // firstChild : this property of the Node interface returns the node's first child in the tree, or null if the node has no children. It will return any child node(text, comments, and attributes). But if we want just to retun the first child element node of a node then use .firstElementChild property.
 let elem11 = document.querySelector("#para-01");
 console.log(elem11.firstChild); // #text, because is space after tag which is consider as text node.
@@ -142,10 +141,14 @@ console.log(document.querySelector(".fruties-div").innerHTML); // Now it display
 console.dir(document.querySelector(".hide-heading").textContent); // Apna College, show the hidden text.
 console.dir(document.querySelector(".hide-heading").innerText); // Not able to show the hidden text.
 
-
-
-
-
+// Getter and setter of attributes.
+console.log(document.querySelector("img"));
+console.log(document.querySelector("img").attributes); 
+console.log(document.querySelector("img").getAttribute('alt')); // getAttribute returns the value of a specified attribute on the element (like src, href). Returns null incase attribbute is not found. 
+document.querySelector('img').setAttribute('alt', 'Updated alt');
+console.log(document.querySelector("img").getAttribute('alt'));
+document.querySelector('img').removeAttribute('alt'); // removes the attribute with the specified name from the element.
+console.log(document.querySelector("img").getAttribute('alt')); // null, because this attribute is not existing.
 
 // Few more properties of Nodes in DOM.
 
@@ -153,7 +156,7 @@ console.log(elem10.ownerDocument); // This property of the Node interface return
 console.log(elem10.baseURI); // returns the absolute base URL of the document containing the node.
 console.log(elem10.isConnected); // A boolean indicating whether or not the Node is connected (directly or indirectly) to the context object, e.g., the Document object in the case of the normal DOM, or the ShadowRoot in the case of a shadow DOM.
 console.log(elem10.parentNode.nodeName); // DIV, parentNode returns name of parent element or null if there is no parent(like of root node).  
-console.log(elem10.childNodes[0].parentElement); // 
+console.log(elem10.childNodes[0].parentElement); // <p>, parentElement returns the DOM node's parent Elemen. Null if no parent is there.
 
 
 
