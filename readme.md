@@ -1,7 +1,7 @@
 # 🚀 JavaScript Concepts & Practice Hub
 
 [![Language](https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.style=for-the-badge)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](./LICENSE)
 
 A structured repository containing practical implementations, code snippets, and exercises covering core-to-advanced JavaScript topics. Designed as a comprehensive learning hub and reference guide for modern JavaScript development.
 
@@ -63,7 +63,7 @@ The repository is modularly organized by concept folders, each containing focuse
 
 ## 👤 Author
 
-**Abdul Rafay**
+**Muhammad Rafay**
 
 - GitHub: [@itsrafay03](https://github.com/itsrafay03)
 
